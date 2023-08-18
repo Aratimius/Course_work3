@@ -1,14 +1,11 @@
-"""
-обрабатываемый файл вызывается в read_file.py
-сортируется в get_sort.py
-данные извлекаются в get_EXECUTED.py
-данные обрабатываются в get_out.py
-Данные выводятся в терминал в get_operations.py
+"""Результат работы программы"""
 
-Результат работы программы:
-"""
-
-from Course_work3.src.get_operations import get_five_last_operations
+import utils
 
 
-get_five_last_operations()
+data = utils.get_all_operations()
+sorted_data = utils.get_sorted(data)
+executed_data = utils.get_executed(sorted_data)
+
+utils.get_five_last_operations(executed_data)
+
